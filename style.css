@@ -1,8 +1,18 @@
 body{
-    background-image: url(image/bkgrd.jpeg);
+    background-image: url(image/bg-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
 }
 .container{
-    margin: 145px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 33px solid #9c27b094;
+    background-image: linear-gradient(45deg, #5c3663, #0000002b);
+    margin: 78px 69px 30px 74px;
+    padding: 7px 91px 23px 46px;
     text-align: center;
 }
 button{
@@ -15,10 +25,10 @@ button{
     color: black;
     background-image: radial-gradient(#a9f2fb54, #db96e6);
     display: inline-block;
-    width: 13em;
+    width: 10em;
     height: 5em;
-    margin: 54px;
-    padding: 0px;
+    margin: 36px -34px 32px -28px;
+    padding: 0px 0px 0px 0px;
 }
 #strt{
     border: 1px solid #000000c7;

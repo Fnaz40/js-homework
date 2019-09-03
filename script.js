@@ -1,26 +1,10 @@
-// // function bany gy strt stop or reset.
-// var minuts = 0;
-// var seconds = 0;
-// var milliseconds = 0;
-// function timerStart(){
-//     if(seconds === 59){
-//        myStrt === minuts === 1; minuts++
-//     }else{
-//         minuts === 0;
-//     }
-// }
-// function myStopbtn(){
-//     clearInterval(myStrt)
-// }
-// var myStrt = setInterval(timerStart, 1000);
-
-
-
-
+// sb time ko 0 sy strt krna hoga.
 var h1 = document.querySelector("h1 time"),
     seconds = 0, minutes = 0, hours = 0,
+    isRunningTime = false,
     t;
 
+// function jis ma time ma number chlygy.
 function add() {
     seconds++;
     if (seconds >= 60) {
@@ -31,19 +15,20 @@ function add() {
             hours++;
         }
     }
-    h1.innerHTML = hours + ":" + minutes + ":" + seconds;
+    h1.innerHTML = `${hours} : ${minutes} : ${seconds}`;
 }  
 
-function timer(){
-    t = setInterval(add, 1000);
-}
-timer();
+// function timer(){
+        t = setInterval(add, 1000);
+// }
+// timer();
 /* Start button */
 function timerStart(){
-    setInterval(timer, 1000);
+    if(isRunningTime === false){
+        // setInterval(timer, 1000);
+        isRunningTime = true;
+    }
 }
-
-
 /* Stop button */
 function myStopbtn(){
     clearInterval(t);
